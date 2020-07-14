@@ -1,0 +1,24 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@use './headings';
+
+//Mixins are functions in sass
+@mixin font_color($color){
+  color: $color;
+}
+
+//An example of nesting different tags togather
+tr{
+  th{
+    font-size: 20px;
+    color: blue;
+  }
+}
+
+td{
+  @include font_color(rgb(15, 146, 22));
+  //An example of inheritance, uncomment to see the effect
+  // @extend th;
+}
